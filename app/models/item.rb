@@ -12,8 +12,8 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :name, :info
 
-    with_options format: format: {with: /\A[0-9]+\z/ },
-    length: {minimum: 3, maxinum: 7}, numericality: { only_integer: true, greater_than: 300, less_than: 9999999 } do
+    with_options format: {with: /\A[0-9]+\z/ },
+    length: {minimum: 3, maxinum: 7}, numericality: { only_integer: true, greater_than: 299, less_than: 9999999 } do
       validates :price
     end
   end
