@@ -16,6 +16,6 @@ class OrdersController < ApplicationController
   private
 
   def transaction_params
-    params.require(:item_transaction_address).permit(:token,:postal_code,:prefecture_id,:city,:address,:building,:phone_number).merge(item_id: item_id, user_id: current_user.id)
+    params.require(:item_transaction_address).permit(:token,:postal_code,:prefecture_id,:city,:address,:building,:phone_number)
   end
 end

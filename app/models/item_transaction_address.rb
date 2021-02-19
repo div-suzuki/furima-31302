@@ -6,7 +6,7 @@ class ItemTransactionAddress
     validates :item_id, :user_id, :item_transaction_id
     validates :prefecture_id, numericality: {other_than: 1}
     validates :postal_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/}
-    validates :phone_number, numericality: {only_integer: true}, length: { in: 11 }
+    validates :phone_number, numericality: {only_integer: true}, length: { maximum: 11 }
     validates :city, :address
   end
 
