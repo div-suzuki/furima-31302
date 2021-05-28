@@ -12,6 +12,6 @@
 
     def save
       item_transaction = ItemTransaction.create(item_id: item_id, user_id: user_id)    
-      Address.create!(postal_code: postal_code, prefecture_id: prefecture_id, city: city,address: address, building: building, phone_number: phone_number, item_transaction_id: item_transaction.id)
+      Address.create(postal_code: postal_code, prefecture_id: prefecture_id, city: city,address: address, building: building, phone_number: phone_number, item_transaction_id: item_transaction.id)
     end
   end
